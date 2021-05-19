@@ -168,7 +168,4 @@ export default {
 //         color:white !important;
 //     }
 // }
-.testVw{
-    width:1.33vw;
-}
 </style>
