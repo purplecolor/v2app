@@ -11,6 +11,7 @@ import draggable from "vuedraggable"
 Vue.component('draggable', draggable)
 
 Vue.use(ElementUI);
+
 Vue.prototype.$echarts=echarts
 new Vue({
   router,
