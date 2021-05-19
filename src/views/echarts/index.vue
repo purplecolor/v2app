@@ -160,12 +160,4 @@ export default {
     height:400px;
     text-align: left;
 }
-// /deep/.opaClass{//tooltip额外样式
-//     background-color:rgba(0,0,0,0.3) !important;
-//     color:white !important;
-//     height:50px !important;
-//     div,span{
-//         color:white !important;
-//     }
-// }
 </style>
