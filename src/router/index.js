@@ -13,7 +13,7 @@ const routes = [
   {
     path: '/drag',
     name: 'drag',
-    component: () => import( '../views/dragPage/index.vue')
+    component: () => import( '../views/drag/index.vue')
   },
   {
     path: '/echarts',

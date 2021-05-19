@@ -4,22 +4,22 @@
             <div class="left flex1">
                 <draggable
                     class="dragTag"
+                    v-model="imgList"
                     :options="{
-                        group: 'imgChoose',
-                        animation: 150,
-                        scroll: true,
-                        scrollSensitivity: 200,
-                        dragClass:'dragClass',
-                        chosenClass:'chosenLeft',
-                        ghostClass:'ghostLeft',
-                        
-                        
+                      group:{name:'site',pull:'clone'},
+                      animation:150,
+                      dragClass:'dragClass',
+                      chosenClass:'chosenClass',
+                      ghostClass:'ghostClass',
                     }"
+                      
                 >
-                    <div class="leftImgCard" v-for="item in imgList"
+                    <div class="leftImgCard" v-for="(item,index) in imgList"
                             :key="item.image_id">
                         <!-- <img :src="item.hd_image_url" alt=""> -->
-                        <div class="img"></div>
+                        <div class="img">
+                          {{index}}
+                        </div>
                     </div>
                 </draggable>
             </div>
@@ -68,6 +68,28 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+.chosenClass{
+  background-color: red !important;
+  opacity: 1!important;
+
+}
+.ghostResive{
+  width:100px !important;
+  height:100px !important;
+}
+
+.ghostClass{
+  background-color:  blue !important;
+  // height:100px !important;
+}
+.dragClass{
+  background-color: blueviolet !important;
+  opacity: 1 !important;
+  box-shadow:none !important;
+  outline:none !important;
+  background-image:none !important;
+}
 .box{
     width:100%;
     height: 100%;
@@ -89,7 +111,7 @@ export default {
             
             .leftImgCard{
                 width:200px;
-                height:auto;
+                height:200px;
                 margin:10px;
                 >.img{
                    width:100%;
@@ -122,9 +144,6 @@ export default {
             //     height:100px;
             // }
             
-        }
-        .dragClass{
-            opacity: 1;
         }
     }
 }
